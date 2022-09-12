@@ -1,3 +1,1 @@
-Future code of webncyclopaedia site ...
-
-In progress 🕒
+## In progress 🕒
