@@ -8,17 +8,14 @@ const Home: NextPage = () => {
   return (
     <ContentWrapper>
       <div className={styles.links}>
-        {data.map(({ title, description }, index) => {
+        {data.map(({ title, description, link }, index) => {
           return (
-            <a
-              href="https://github.com/Webncyclopaedia/react-best-practices"
-              key={index}
-            >
+            <Link href={link} key={index}>
               <div className={styles.link}>
                 <h2>{title}</h2>
                 <h4>{description}</h4>
               </div>
-            </a>
+            </Link>
           );
         })}
       </div>
