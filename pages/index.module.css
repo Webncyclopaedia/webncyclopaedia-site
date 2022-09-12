@@ -1,0 +1,30 @@
+.links {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.link {
+  padding: 20px;
+  margin-right: 10px;
+  border-radius: 10px;
+  background: whitesmoke;
+  margin-bottom: 10px;
+}
+
+.link h2 {
+  margin: 0;
+  color: #47ad7a;
+}
+
+.link h4 {
+  font-weight: normal;
+}
+
+.link:hover {
+  background: #ebebeb;
+  cursor: pointer;
+}
+
+.link:nth-child(3n) {
+  margin-right: 0;
+}
