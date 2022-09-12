@@ -1,0 +1,7 @@
+.contentWrapper {
+  padding: 20px;
+  min-height: 90vh;
+  border-radius: 20px;
+  width: 60vw;
+  background: white;
+}
