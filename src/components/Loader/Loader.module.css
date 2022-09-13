@@ -1,0 +1,23 @@
+.loader {
+  width: 50px;
+  height: 50px;
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    #053540 0deg,
+    #adfea0 281.25deg,
+    #053540 360deg
+  );
+  background-blend-mode: hard-light;
+  border-radius: 100px;
+
+  animation: infinite-spinning 0.7s infinite ease;
+}
+
+@keyframes infinite-spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

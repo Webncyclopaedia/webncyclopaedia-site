@@ -20,6 +20,12 @@
   font-weight: normal;
 }
 
+.link h5 {
+  align-self: flex-end;
+  margin: 0;
+  color: #47ad7a;
+}
+
 .link:hover {
   background: #ebebeb;
   cursor: pointer;
