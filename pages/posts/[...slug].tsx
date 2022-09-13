@@ -13,7 +13,7 @@ function Post({
           style={{ textDecoration: "underline" }}
           href={`https://github.com/Webncyclopaedia/${name}`}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           react best practices info here
         </a>
