@@ -11,17 +11,19 @@ const Home = ({
     <ContentWrapper>
       <div className={styles.links}>
         {Array.isArray(data) &&
-          data.map(({ description, name, stargazers_count }, index) => {
-            return (
-              <Link href={`/posts/${name}`} key={index}>
-                <div className={styles.link}>
-                  <h2>{name}</h2>
-                  <h4>{description}</h4>
-                  <h5>{stargazers_count} ★</h5>
-                </div>
-              </Link>
-            );
-          })}
+          data
+            .filter(({ name }) => name !== "webncyclopaedia-site")
+            .map(({ description, name, stargazers_count }, index) => {
+              return (
+                <Link href={`/posts/${name}`} key={index}>
+                  <div className={styles.link}>
+                    <h2>{name}</h2>
+                    <h4>{description}</h4>
+                    <h5>{stargazers_count} ★</h5>
+                  </div>
+                </Link>
+              );
+            })}
       </div>
     </ContentWrapper>
   );
