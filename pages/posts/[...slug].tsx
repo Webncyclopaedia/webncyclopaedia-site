@@ -28,7 +28,7 @@ function Post({
           target="_blank"
           rel="noopener noreferrer"
         >
-          react best practices info here
+          Github link
         </a>
         <br />
         <div dangerouslySetInnerHTML={{ __html: htmlString }} />
