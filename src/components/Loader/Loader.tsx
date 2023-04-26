@@ -1,7 +1,12 @@
 import styles from "./Loader.module.css";
+import { FC, ReactNode } from "react";
 
-// TODO: Убрать any
-const Loader = ({ children, loading }: any) => {
+interface LoaderProps {
+  children: ReactNode;
+  loading: boolean;
+}
+
+const Loader: FC<LoaderProps> = ({ children, loading }) => {
   return <>{loading ? <div className={styles.loader} /> : children}</>;
 };
 

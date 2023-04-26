@@ -1,14 +1,19 @@
 .links {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 768px) {
+  .links {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .link {
   padding: 20px;
-  margin-right: 10px;
   border-radius: 10px;
   background: whitesmoke;
-  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

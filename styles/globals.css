@@ -14,9 +14,8 @@ body {
   background-blend-mode: hard-light;
   min-height: 100vh;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  padding: 20px;
 }
 
 a {
