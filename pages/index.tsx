@@ -1,10 +1,24 @@
-import type { InferGetServerSidePropsType, NextPage } from "next";
+import type {
+  GetServerSideProps,
+  InferGetServerSidePropsType,
+  NextPage,
+} from "next";
 import Link from "next/link";
 import ContentWrapper from "../src/components/ContentWrapper";
 import styles from "./index.module.css";
 import axios from "axios";
 
-const Home = ({
+interface RepoProps {
+  name: string;
+  description: string;
+  stargazers_count: number;
+}
+
+interface Props {
+  data: RepoProps[];
+}
+
+const Home: NextPage<Props> = ({
   data,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   return (
@@ -29,13 +43,13 @@ const Home = ({
   );
 };
 
-export async function getServerSideProps() {
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const res = await axios.get(
     "https://api.github.com/orgs/webncyclopaedia/repos"
   );
-  const data = await res.data;
+  const data: RepoProps[] = await res.data;
 
   return { props: { data } };
-}
+};
 
 export default Home;

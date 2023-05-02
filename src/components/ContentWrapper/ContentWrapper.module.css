@@ -2,6 +2,12 @@
   padding: 20px;
   min-height: 90vh;
   border-radius: 20px;
-  width: 60vw;
+  width: 100%;
   background: white;
+}
+
+@media (min-width: 768px) {
+  .contentWrapper {
+    width: 60vw;
+  }
 }

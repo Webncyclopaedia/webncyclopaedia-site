@@ -1,6 +1,6 @@
 import styles from "./ContentWrapper.module.css";
 
-const ContentWrapper = ({ children }: any) => {
+const ContentWrapper = ({ children }: { children: React.ReactNode }) => {
   return <div className={styles.contentWrapper}>{children}</div>;
 };
 
